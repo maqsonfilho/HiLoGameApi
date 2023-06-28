@@ -9,4 +9,10 @@ public class GameDto : DtoBase
     public int MysteryNumber { get; set; }
     public List<PlayerDto> Players { get; set; }
     public List<GuessDto> Guesses { get; set; }
+
+    public GameDto()
+    {
+        Players = new List<PlayerDto>();
+        Guesses = new List<GuessDto>();
+    }
 }
