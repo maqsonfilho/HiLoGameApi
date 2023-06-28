@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiLoGame.Api", "src\HiLoGame.Api\HiLoGame.Api.csproj", "{0D043ACC-7987-4FF4-8771-06FDCB8AC1A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiLoGame.UnitTests", "tests\HiLoGame.UnitTests\HiLoGame.UnitTests.csproj", "{540AF008-4B55-4713-B7F2-AF1C4F22B56F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiLoGame.Application", "src\HiLoGame.Application\HiLoGame.Application.csproj", "{EFDF559D-5421-433C-89CA-1AE4FD05C464}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiLoGame.Infrastructure", "src\HiLoGame.Infrastructure\HiLoGame.Infrastructure.csproj", "{12FA3BCA-AEAF-454F-B9A0-D2790D5030CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiLoGame.Domain", "src\HiLoGame.Domain\HiLoGame.Domain.csproj", "{8657EB80-D462-4053-BB7D-6D7878D1211F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D043ACC-7987-4FF4-8771-06FDCB8AC1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D043ACC-7987-4FF4-8771-06FDCB8AC1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D043ACC-7987-4FF4-8771-06FDCB8AC1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D043ACC-7987-4FF4-8771-06FDCB8AC1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540AF008-4B55-4713-B7F2-AF1C4F22B56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540AF008-4B55-4713-B7F2-AF1C4F22B56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540AF008-4B55-4713-B7F2-AF1C4F22B56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540AF008-4B55-4713-B7F2-AF1C4F22B56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDF559D-5421-433C-89CA-1AE4FD05C464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDF559D-5421-433C-89CA-1AE4FD05C464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDF559D-5421-433C-89CA-1AE4FD05C464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDF559D-5421-433C-89CA-1AE4FD05C464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12FA3BCA-AEAF-454F-B9A0-D2790D5030CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FA3BCA-AEAF-454F-B9A0-D2790D5030CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FA3BCA-AEAF-454F-B9A0-D2790D5030CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FA3BCA-AEAF-454F-B9A0-D2790D5030CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8657EB80-D462-4053-BB7D-6D7878D1211F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8657EB80-D462-4053-BB7D-6D7878D1211F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8657EB80-D462-4053-BB7D-6D7878D1211F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8657EB80-D462-4053-BB7D-6D7878D1211F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FA26FDA-216A-4E33-9F5B-5B10D1FFDAA8}
+	EndGlobalSection
+EndGlobal
