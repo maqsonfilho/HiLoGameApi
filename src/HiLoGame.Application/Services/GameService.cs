@@ -60,10 +60,16 @@ public class GameService : IGameService
     public async Task<GameDto> StartGameAsync(Guid gameId)
     {
         var game = await _gameRepository.GetByIdAsync(gameId);
+
+        if (game is null)
+        {
+            throw new Exception("Game not found");
+        }
+
         game.IsGameStarted = true;
         game = await _gameRepository.Update(game);
 
-        _logger.LogInformation($"New game started. GameId: {game.Id} at {DateTime.UtcNow}");
+        _logger.LogInformation($"New game started. GameId: {game.Id}");
 
         return _mapper.Map<GameDto>(game);
     }
