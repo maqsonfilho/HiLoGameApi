@@ -282,4 +282,41 @@ public class GameServiceTests
         ValidationException exception = await Assert.ThrowsAsync<ValidationException>(act);
         Assert.Equal("Invalid guess number. The number must be within the range specified for the game.", exception.Message);
     }
+
+    [Fact]
+    public async Task StartGameAsync_WithValidGameId_SetsIsGameStartedToTrueAndReturnsGameDto()
+    {
+        // Arrange
+        var gameId = Guid.NewGuid();
+        var gameEntity = new GameEntity { Id = gameId, IsGameStarted = false };
+        var gameDto = new GameDto { Id = gameEntity.Id, IsGameStarted = true };
+        _gameRepositoryMock.Setup(repo => repo.GetByIdAsync(gameId)).ReturnsAsync(gameEntity);
+        _gameRepositoryMock.Setup(repo => repo.Update(It.IsAny<GameEntity>())).ReturnsAsync(gameEntity);
+
+        // Act
+        var result = await _sut.StartGameAsync(gameId);
+
+        // Assert
+        Assert.True(gameEntity.IsGameStarted);
+        Assert.Equal(gameDto.MinNumber, result.MinNumber);
+        Assert.Equal(gameDto.MaxNumber, result.MaxNumber);
+        Assert.Equal(gameDto.Players.Count, result.Players.Count);
+        Assert.Equal(gameDto.Guesses.Count, result.Guesses.Count);
+        Assert.Equal(gameDto.MysteryNumber, result.MysteryNumber);
+    }
+
+    [Fact]
+    public async Task StartGameAsync_WithNonExistingGameId_ThrowsException()
+    {
+        // Arrange
+        var gameId = Guid.NewGuid();
+        _gameRepositoryMock.Setup(repo => repo.GetByIdAsync(gameId)).ReturnsAsync((GameEntity)null);
+
+        // Act
+        Func<Task> act = () => _sut.StartGameAsync(gameId);
+        
+        // Assert
+        Exception exception = await Assert.ThrowsAsync<Exception>(act);
+        Assert.Equal("Game not found", exception.Message);
+    }
 }
